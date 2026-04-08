@@ -1,23 +1,30 @@
+using Microsoft.EntityFrameworkCore;
+using BookstoreManagement_CodeFirst.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// --- PHẦN 1: ĐĂNG KÝ DỊCH VỤ (SERVICES) ---
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// ĐIỀU CHỈNH: Đưa dòng này lên TRƯỚC builder.Build()
+builder.Services.AddDbContext<FootballFieldDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// --- PHẦN 2: XÂY DỰNG APP ---
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// --- PHẦN 3: CẤU HÌNH PIPELINE (MIDDLEWARE) ---
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

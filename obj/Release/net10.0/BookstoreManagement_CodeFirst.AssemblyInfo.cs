@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookstoreManagement_CodeFirst")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cab0f00636394c9642d45b159274a85fd6369bc3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4425cb6b97d3c03357143857fbaf29773bc50e1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookstoreManagement_CodeFirst")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookstoreManagement_CodeFirst")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
